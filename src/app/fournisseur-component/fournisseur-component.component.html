@@ -1,0 +1,9 @@
+<button (click)="hiding()" [ngClass]="hide ? 'btn btn-primary': 'btn btn-danger'"><span *ngIf="hide">afficher</span><span *ngIf="!hide">cacher</span></button>
+<br><br>
+<div class="cadre" [hidden]="hide">
+    <ul>
+        <li> {{fournisseur.idFournisseur}} </li>
+        <li> {{fournisseur.code}} </li>
+        <li> {{fournisseur.libelle}} </li>
+    </ul>  
+</div>

@@ -1,0 +1,27 @@
+<div class="d-flex align-items-center flex-column bd-highlight mb-3">
+
+    <img style="width:95%" src="../assets/images/slide.png">
+    <input class="form-group" placeholder="search" style="width: 40%;">
+
+    <div class="row">
+      <div *ngFor="let user of userList" class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <img src="../assets/images/{{user.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
+            <p class="card-text">
+              <strong>Email:</strong> {{ user.email }}<br>
+              <strong>Birth Date:</strong> {{ user.birthDate }}<br>
+              <strong>Profession:</strong> {{ user.profession }}<br>
+              <strong>Account Category:</strong> {{ user.accountCategory }}
+            </p>
+            <a href="#" class="btn btn-primary">Show All</a>
+            <button class="btn btn-danger" (click)="deleteUser(user.idCustomer)">Delete</button>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    
+</div>

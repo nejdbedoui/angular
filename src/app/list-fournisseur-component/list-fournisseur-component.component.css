@@ -1,0 +1,24 @@
+.container {
+  display: inline-block;
+  margin: 10px;
+  position: relative; /* Add positioning context */
+  border: 1px solid #000; 
+}
+
+.header {
+  padding: 5px;
+  text-align: left;
+  position: relative; 
+  top:-19px;
+  background-color: white;
+  width: fit-content;
+}
+
+
+
+.content {
+  position: relative; 
+  padding: 10px;
+  top:-19px;
+}
+

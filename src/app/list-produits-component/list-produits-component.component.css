@@ -1,0 +1,25 @@
+.container {
+    display: inline-block;
+    margin: 10px;
+    position: relative; /* Add positioning context */
+    border: 1px solid #000; 
+  }
+ 
+  
+  ul{
+    list-style-type:circle;
+  }
+  
+ 
+  
+
+  .inf {
+    color: blue;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  input{
+    width: 50%;
+  }
+  

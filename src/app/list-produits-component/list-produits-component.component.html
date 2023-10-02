@@ -1,0 +1,64 @@
+<button (click)="ajouter()" class="btn btn-primary">Formulaire Ajout</button>
+<div *ngIf="ajout">
+    <b>Ajouter Produit</b><br>
+
+    <div >
+        <div class="row">
+          <div class="col-md-2">
+            idProduit
+          </div>
+          <div class="col-md-10">
+            <input [(ngModel)]="produit.idProduit" placeholder="idProduit" type="text">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Code
+            </div>
+            <div class="col-md-10">
+              <input [(ngModel)]="produit.code" placeholder="Code" type="text">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+                prix Unitaire
+            </div>
+            <div class="col-md-10">
+              <input [(ngModel)]="produit.prixUnitaire" placeholder="prix Unitaire" type="number">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+                Taux TVA
+            </div>
+            <div class="col-md-10">
+              <input [(ngModel)]="produit.tauxTVA" placeholder="taux TVA" min="0" max="1" type="number">
+            </div>
+          </div>
+          <button (click)="ajouterp()">Ajouter</button>
+    </div>
+
+</div>
+<br><br>
+
+<input type="text" style="width: 20%;" [(ngModel)]="code" placeholder="code produit">
+<div class="container" *ngFor="let produit of listProduits; let i=index">
+   <!--     <div *ngIf="(code!='' && code == produit.code) || code==''" [ngClass]="{'inf': produit.tauxTVA <= 0.05}">--> 
+    <div *ngIf="(code!='' && produit.code.includes(code) ) || code==''" [ngClass]="{'inf': produit.tauxTVA <= 0.05}">
+        <div class="content">
+            Produit : {{produit.libelle}} <button (click)="modifiertva(i)" [disabled]="produit.tauxTVA==0.02">Ajuster TVA</button>
+             <span *ngIf="contain(i)" style="color: red;"> TVA modifiée</span>
+            <ul>
+            <li>Identifiant : {{produit.idProduit}}</li>
+            <li>Code : {{produit.code}}</li>
+          <li> Prix Unitaire :  {{produit.prixUnitaire}}</li>
+          <li>Taux TVA :  {{produit.tauxTVA}}</li>
+        </ul>
+        </div>
+      </div>
+      <br>
+</div>
+
+         
+         
+  
