@@ -1,0 +1,8 @@
+<p *ngIf="!active">Impossible de visualiser les détails de la facture</p>
+<p *ngIf="active">
+    id : {{ invoice.idFacture }}<br>
+    montantFacture : {{ invoice.montantFacture }}<br>
+    montantRemise : {{ invoice.montantRemise }}<br>
+    dateFacture : {{ invoice.dateFacture }}
+</p>
+<button (click)="retour()">retour</button>

@@ -1,6 +1,6 @@
 <div *ngFor="let fournisseur of listeFournisseur; let i=index">
     <div (dblclick)="delete(i)" class="container" *ngIf="fournisseur.idFournisseur <= 100" [ngStyle]="{'background-color': fournisseur.libelle === 'hp' ? 'green' : 'yellow'}">
-        <div class="header">idFournisseur: {{fournisseur.idFournisseur}} </div>
+        <div class="header">IdFournisseur: {{fournisseur.idFournisseur}} </div>
         <div class="content">
           <p>Code : <span [ngStyle]="{'font-weight': getColor(fournisseur.code) ? 'bold' : null}">{{fournisseur.code}}</span></p>
           <p>Libelle : {{fournisseur.libelle}}</p>
@@ -8,7 +8,4 @@
       </div>
       <br>
 </div>
-
-         
-         
-  
+<button type="button" (click)="add()">Add User</button>

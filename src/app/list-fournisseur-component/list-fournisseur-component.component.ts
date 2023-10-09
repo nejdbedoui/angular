@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Fournisseur } from '../_Models/Fournisseurs';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-fournisseur-component',
@@ -7,7 +8,9 @@ import { Fournisseur } from '../_Models/Fournisseurs';
   styleUrls: ['./list-fournisseur-component.component.css']
 })
 export class ListFournisseurComponentComponent {
+constructor(private router:Router){
 
+}
   listeFournisseur:Fournisseur[]=[
     new Fournisseur(1,"1ABC4522","hp"),
     new Fournisseur(2,"2ABC4522","dell"),
@@ -21,6 +24,8 @@ export class ListFournisseurComponentComponent {
 
   delete(i:number){
     this.listeFournisseur.splice(i,1)
-    console.log(this.listeFournisseur)
+  }
+  add(){
+this.router.navigate(["/add"])
   }
 }

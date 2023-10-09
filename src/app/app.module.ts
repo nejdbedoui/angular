@@ -11,6 +11,8 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { FournisseurComponentComponent } from './fournisseur-component/fournisseur-component.component';
 import { ListFournisseurComponentComponent } from './list-fournisseur-component/list-fournisseur-component.component';
 import { ListProduitsComponentComponent } from './list-produits-component/list-produits-component.component';
+import { InvoiceListComponentComponent } from './invoice-list-component/invoice-list-component.component';
+import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ListProduitsComponentComponent } from './list-produits-component/list-p
     AddUserComponent,
     FournisseurComponentComponent,
     ListFournisseurComponentComponent,
-    ListProduitsComponentComponent
+    ListProduitsComponentComponent,
+    InvoiceListComponentComponent,
+    InvoiceDetailsComponent
   ],
   imports: [
     BrowserModule,
