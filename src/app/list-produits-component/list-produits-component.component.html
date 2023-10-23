@@ -47,6 +47,8 @@
     <div *ngIf="(code!='' && produit.code.includes(code) ) || code==''" [ngClass]="{'inf': produit.prixUnitaire! <= 50}">
         <div class="content">
             Produit : {{produit.libelle}} <button (click)="modifiertva(i)" [disabled]="produit.tauxTVA==0.02">Ajuster TVA</button>
+            <button (click)="calculer(produit.libelle,i)">Calculer</button>
+            <span *ngIf="index2==i">Nombre de produit : {{count}} </span>
              <span *ngIf="contain(i)" style="color: red;"> TVA modifiée</span>
             <ul>
             <li>Identifiant : {{produit.idProduit}}</li>
